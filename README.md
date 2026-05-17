@@ -28,15 +28,7 @@ Automated script for interacting with the **Seismic Testnet** (Chain ID: 5124) w
 ```bash
 # Install dependencies
 pip install -r requirements.txt
-```
 
-### Option 1: CLI Script (Terminal)
-```bash
-python seismic_testnet.py
-```
-
-### Option 2: Telegram Bot
-```bash
 # 1. Create a bot via @BotFather on Telegram and get the token
 # 2. Set your token
 export TELEGRAM_BOT_TOKEN="your-token-here"
@@ -48,28 +40,24 @@ Then open your bot on Telegram and send `/start`.
 
 ## Usage
 
-### Main Menu
-```
-1. Wallet Management     — Create/Import/List/Remove/Export wallets
-2. Check Balances        — View ETH balance for all wallets
-3. Deploy Contracts      — Deploy Timer/Token contracts (single or batch)
-4. View Transactions     — Explorer links for wallet transactions
-5. Network Info          — Seismic Testnet details & MetaMask setup
-6. Faucet Link           — Get testnet ETH & USDC
-0. Exit
-```
+### Bot Commands
+- `/start` — Main menu with inline buttons
+- `/help` — Help & feature list
+- `/stop_auto` — Stop auto-deploy mode
+- `/cancel` — Cancel current operation
 
 ### Quick Start
-1. Run the script: `python seismic_testnet.py`
-2. Go to **Wallet Management** → Create or Import a wallet
-3. Get testnet ETH from the faucet (need 10 GitHub followers)
-4. Go to **Deploy Contracts** → Deploy Timer or Token contracts
-5. Use **Auto Deploy Mode** for automated daily deployments
+1. Run the bot: `python seismic_tg_bot.py`
+2. Send `/start` to your bot on Telegram
+3. Tap **Wallet Management** → Create or Import a wallet
+4. Get testnet ETH from the faucet (need 10 GitHub followers)
+5. Tap **Deploy Contracts** → Deploy Timer or Token contracts
+6. Use **Auto Deploy Mode** for automated daily deployments
 
 ### Multi-Wallet Workflow
-1. Create/import multiple wallets
+1. Create/import multiple wallets via the bot
 2. Fund all wallets from the faucet
-3. Use **Batch Deploy** to deploy contracts from all wallets at once
+3. Use **Batch Deploy** buttons to deploy contracts from all wallets at once
 4. Use **Auto Deploy Mode** to automate recurring deployments
 
 ## Faucet Instructions
@@ -88,7 +76,7 @@ Then open your bot on Telegram and send `/start`.
    - Explorer: `https://seismic-testnet.socialscan.io`
 
 ## Files
-- `seismic_testnet.py` — Main bot script
+- `seismic_tg_bot.py` — Telegram bot script
 - `requirements.txt` — Python dependencies
 - `seismic_wallets.json` — Wallet storage (created on first use, **keep private!**)
 
