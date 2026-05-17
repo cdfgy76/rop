@@ -28,10 +28,23 @@ Automated script for interacting with the **Seismic Testnet** (Chain ID: 5124) w
 ```bash
 # Install dependencies
 pip install -r requirements.txt
+```
 
-# Run the bot
+### Option 1: CLI Script (Terminal)
+```bash
 python seismic_testnet.py
 ```
+
+### Option 2: Telegram Bot
+```bash
+# 1. Create a bot via @BotFather on Telegram and get the token
+# 2. Set your token
+export TELEGRAM_BOT_TOKEN="your-token-here"
+
+# 3. Run the bot
+python seismic_tg_bot.py
+```
+Then open your bot on Telegram and send `/start`.
 
 ## Usage
 
